@@ -1,25 +1,25 @@
 {% extends 'shopapp/base.html' %}
 
 {% block title %}
-    ЧикенБургер'ы
+    чай
 {% endblock %}
 
 {% block body %}
     <div style="text-align: right; padding-right: 120px; padding-top: 20px;">
         <form action="{% url 'shopapp:search' %}" method="GET">
             <input type="search" type="text" name="q" placeholder="Поиск">
-            <button style="text-shadow: 1px 1px 2px black; color: white; background-color: rgb(119, 89, 55);" type="submit">Поиск</button>
+            <button style="text-shadow: 1px 1px 2px black; color: white; background-color: black;" type="submit">Поиск</button>
             <br>
-            <button style="margin-top: 5px; width: 234px; text-shadow: 1px 1px 2px black; color: white; background-color: rgb(119, 89, 55);" type="submit">Сбросить параметры поиска</button>
+            <button style="margin-top: 5px; width: 234px; text-shadow: 1px 1px 2px black; color: white; background-color: black;" type="submit">Сбросить параметры поиска</button>
         </form>
     </div>
 
-    <h1 style="text-align: center; color: white; font-size: 40px;">Каталог ЧикенБургеров</h1>
+    <h1 style="text-align: center; color: white; font-size: 40px;">Каталог </h1>
      {% if products %}
         <div  style="display: flex; justify-content: center;">
             {% for product in products %}
                 <div style="color: white; text-align: center;">
-                    <h1><a style="text-decoration: underline; color: rgb(119, 89, 55);" href="{% url 'shopapp:product_details' pk=product.pk %}">{{ product.name }}</a></h1>
+                    <h1><a style="text-decoration: underline; color: white;" href="{% url 'shopapp:product_details' pk=product.pk %}">{{ product.name }}</a></h1>
                     <div>
                         {% if product.preview %}
                           <img style="width: 400px; height: 250px" src="{{ product.preview.url }}" alt="{{ product.preview.name }}">
@@ -37,7 +37,7 @@
     {% endif %}
     {% if perms.shopapp.add_product %}
         <div>
-            <a style="padding-left: 120px; text-decoration: underline; color: rgb(119, 89, 55); font-size: 20px;" href="{% url 'shopapp:product-create'%}">Добавить новые Чикен'ы</a>
+            <a style="padding-left: 120px; text-decoration: underline; color: white; font-size: 20px;" href="{% url 'shopapp:product-create'%}">Добавить товар</a>
         </div>
     {% endif %}
 {% endblock %}

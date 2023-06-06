@@ -12,10 +12,10 @@
 <header>
     {% block header %}
     <div class="header">
-        <div class="logotype">ЧикенBurger</div>
+        <div class="logotype">TEAhouse</div>
         <div class="nav">
             <a class="home" href="{% url 'shopapp:index'%}">Главная</a>
-            <a class="catalog" href="{% url 'shopapp:products-list'%}">Каталог чикенбургеров</a>
+            <a class="catalog" href="{% url 'shopapp:products-list'%}">Каталог </a>
             <a class="contacts" href="#cont">Контакты</a>
             {% if user.is_authenticated %}
                 <a class="profile" href="{% url 'shopapp:about-me'%}">Профиль</a>
@@ -39,9 +39,9 @@
 {% block footer %}
   <div id="cont" class="contacts_footer">
     <h1>Контакты:</h1>
-    <p>Email: test@test.ru</p>
-    <p>Телефон: +7-999-99-99</p>
-    <p>Адресс: г.Бургер, ул.Чикен 69</p>
+    <p>Email: teahouse.com</p>
+    <p>Телефон: 8-800-555-35-35</p>
+    <p>Адресс: г.Владивосток ул.Державина 57</p>
   </div>
 {% endblock %}
 </body>

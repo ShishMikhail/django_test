@@ -6,7 +6,7 @@
 
 {% block body %}
   <div>
-    <h1 style="color: rgb(119, 89, 55); text-align: center;"><strong>Удаление товара {{ product.name }}</strong></h1>
+    <h1 style="color: white; text-align: center;"><strong>Удаление товара {{ product.name }}</strong></h1>
     <div style="color: white; text-align: center;">
         <div>
             {% if product.preview %}
@@ -21,11 +21,11 @@
     </div>
     <form method="post" style="padding-left: 120px; padding-bottom: 50px; padding-top: 50px;">
       {% csrf_token %}
-      <button style="background-color: rgb(119, 89, 55); color: white;" type="submit">Удалить товар</button>
+      <button style="background-color: white; color: black;" type="submit">Удалить товар</button>
     </form>
   </div>
   <div>
-    <a style="text-decoration: underline; color: rgb(119, 89, 55);" href="{% url 'shopapp:products-list' %}"
-    >Назад к каталогу Чикен'ов</a>
+    <a style="text-decoration: underline;padding-left: 120px; color: white;" href="{% url 'shopapp:products-list' %}"
+    >Назад</a>
   </div>
 {% endblock %}

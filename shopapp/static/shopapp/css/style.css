@@ -1,16 +1,16 @@
 body{
-    background-color: rgb(194, 156, 112);
+    background-color: rgb(0, 128, 0);
 }
 .contacts_footer{
     padding-left: 50px;
     padding-top: 1px;
     font-size: 20px;
     color: white;
-    background-color: rgb(119, 89, 55);
+    background-color: rgb(0, 128, 0);
     height: 250px;
 }
 .header{
-    background-color: rgb(119, 89, 55);
+    background-color: rgb(0, 100, 0);
     height: 150px;
 }
 

@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-    <h1 style="color: rgb(119, 89, 55); text-align: center;"><strong>{{ product.name }}</strong></h1>
+    <h1 style="color: white; text-align: center;"><strong>{{ product.name }}</strong></h1>
     <div style="color: white; text-align: center;">
         <div>
             {% if product.preview %}
@@ -31,26 +31,26 @@
     </div>
 
     <div>
-        <a style="padding-left: 150px; text-decoration: underline; color: rgb(119, 89, 55); font-size: 20px;" href="{% url 'shopapp:add_to_cart' product.pk %}">Добавить в корзину</a>
+        <a style="padding-left: 150px; text-decoration: underline; color: white; font-size: 20px;" href="{% url 'shopapp:add_to_cart' product.pk %}">Добавить в корзину</a>
         <br>
     </div>
     {% if perms.shopapp.change_product %}
         <div>
-            <a style="padding-left: 150px; text-decoration: underline; color: rgb(119, 89, 55); font-size: 20px;" href="{% url 'shopapp:product_update' pk=product.pk %}">Редактировать</a>
+            <a style="padding-left: 150px; text-decoration: underline; color: white; font-size: 20px;" href="{% url 'shopapp:product_update' pk=product.pk %}">Редактировать</a>
             <br>
         </div>
     {% endif %}
 
     {% if perms.shopapp.delete_product %}
         <div>
-            <a style="padding-left: 150px; text-decoration: underline; color: rgb(119, 89, 55); font-size: 20px;" href="{% url 'shopapp:product_delete' pk=product.pk %}">Удалить</a>
+            <a style="padding-left: 150px; text-decoration: underline; color: white; font-size: 20px;" href="{% url 'shopapp:product_delete' pk=product.pk %}">Удалить</a>
             <br>
         </div>
     {% endif %}
 
 
     <div>
-        <a style="padding-left: 150px; text-decoration: underline; color: rgb(119, 89, 55); font-size: 20px;" href="{% url 'shopapp:products-list' %}">Назад к каталогу Чикен'ов</a>
+        <a style="padding-left: 150px; text-decoration: underline; color: white; font-size: 20px;" href="{% url 'shopapp:products-list' %}">Назад </a>
     </div>
 
 {% endblock %}

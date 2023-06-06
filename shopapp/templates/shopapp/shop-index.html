@@ -1,7 +1,7 @@
 {% extends 'shopapp/base.html' %}
 
 {% block title %}
-    ChickenBurger Shop
+    TEAhouse
 {% endblock %}
 
 {% block body %}
@@ -9,7 +9,7 @@
     <div  style="display: flex; justify-content: center; padding-bottom: 50px;">
         {% for product in products %}
             <div style="color: white; text-align: center;">
-                <h1><a style="text-decoration: underline; color: rgb(119, 89, 55);" href="{% url 'shopapp:product_details' pk=product.pk %}">{{ product.name }}</a></h1>
+                <h1><a style="text-decoration: underline; color: white;" href="{% url 'shopapp:product_details' pk=product.pk %}">{{ product.name }}</a></h1>
                 <div>
                     {% if product.preview %}
                         <img style="width: 400px; height: 250px;" src="{{ product.preview.url }}" alt="{{ product.preview.name }}">
