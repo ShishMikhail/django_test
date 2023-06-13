@@ -15,6 +15,8 @@ from .views import (
     add_to_cart,
     remove_from_cart,
     create_order,
+    ProductSortHView,
+    ProductSortLView,
 )
 from .views import shop_index
 app_name = "shopapp"
@@ -27,6 +29,10 @@ urlpatterns = [
     path("about-me/", AboutMeView.as_view(), name='about-me'),
     path("about-me/<int:pk>/update/", AboutMeUpdateView.as_view(), name="profile-update"),
     path("products/", ProductsListView.as_view(), name="products-list"),
+
+    path("productsh/", ProductSortHView.as_view(), name="product-sorth"),
+    path("productsl/", ProductSortLView.as_view(), name="product-sortl"),
+
     path("products/<int:pk>/", ProductDetailsView.as_view(), name="product_details"),
     path("products/update/<int:pk>/", ProductUpdateView.as_view(), name="product_update"),
     path("products/delete/<int:pk>/", ProductDeleteView.as_view(), name="product_delete"),

@@ -24,6 +24,17 @@ class ProductsListView(ListView):
     context_object_name = "products"
     queryset = Product.objects.all()
 
+class ProductSortHView(ListView):
+    template_name = "shopapp/products-list.html"
+    context_object_name = "products"
+    queryset = Product.objects.all().order_by('-price')
+
+class ProductSortLView(ListView):
+    template_name = "shopapp/products-list.html"
+    context_object_name = "products"
+    queryset = Product.objects.all().order_by('price')
+
+
 class ProductDetailsView(DetailView):
     template_name = 'shopapp/products-details.html'
     model = Product
